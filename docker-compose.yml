@@ -3,7 +3,7 @@ version: '3'
 services:
   backend:
     build: ./backend
-    command: python -m flask run --host=0.0.0.0
+    command: ["flask", "run", "--host=0.0.0.0"]
     volumes:
       - ./backend:/docker-backend
     environment:
@@ -14,12 +14,16 @@ services:
 
   react:
     build: ./frontend
-    command: asdfadf
+    command: ["npm", "start"]
     volumes:
       - ./frontend:/docker-frontend
+      - node-modules:/docker-frontend/node_modules
     environment:
       - NODE_ENV=development
     ports:
       - '3000:3000'
     depends_on:
       - backend
+
+volumes:
+  node-modules:
