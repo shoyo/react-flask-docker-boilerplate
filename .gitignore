@@ -1,0 +1,4 @@
+# Ignore auxillary files
+.idea
+.DS_Store
+roadmap.txt
