@@ -1,3 +1,6 @@
+# Ignore pycache
+backend/__pycache__
+
 # Ignore auxillary files
 .idea
 .DS_Store
