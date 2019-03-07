@@ -1,8 +1,23 @@
+# Warning: This Compose file is incomplete. This file does NOT prepare the project for deployment.
+
 version: '3'
 
 services:
-  flask:
+  api:
+    build: api
+    command: "flask run --host=0.0.0.0"
     environment:
-      - FLASK_ENV=production
+    - FLASK_ENV=production
+    - FLASK_APP=app.py
+    ports:
+    - "9405:9405"
 
-# Reference: https://docs.docker.com/compose/production/
+  client:
+    build: client
+    command: "npm run build &&"
+    environment:
+    - NODE_ENV=production
+    ports:
+    - '7860:7860'
+    depends_on:
+    - api

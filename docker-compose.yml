@@ -1,29 +1,29 @@
 version: '3'
 
 services:
-  backend:
-    build: ./backend
+  api:
+    build: api
     command: ["flask", "run", "--host=0.0.0.0"]
     volumes:
-      - ./backend:/docker-backend
+      - ./api:/backend
     environment:
       - FLASK_ENV=development
       - FLASK_APP=app.py
     ports:
       - "5000:5000"
 
-  frontend:
-    build: ./frontend
+  client:
+    build: client
     command: ["npm", "start"]
     volumes:
-      - ./frontend:/docker-frontend
-      - node-modules:/docker-frontend/node_modules
+      - ./client:/frontend
+      - node-modules:/frontend/node_modules
     environment:
       - NODE_ENV=development
     ports:
       - '3000:3000'
     depends_on:
-      - backend
+      - api
 
 volumes:
   node-modules:

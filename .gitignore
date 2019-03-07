@@ -1,5 +1,8 @@
+# Ignore React production build
+client/build
+
 # Ignore pycache
-backend/__pycache__
+api/__pycache__
 
 # Ignore auxillary files
 .idea
