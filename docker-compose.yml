@@ -12,7 +12,7 @@ services:
     ports:
       - "5000:5000"
 
-  react:
+  frontend:
     build: ./frontend
     command: ["npm", "start"]
     volumes:
