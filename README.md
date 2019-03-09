@@ -1,4 +1,4 @@
-# React + Flask Development Boilerplate (Under Development)
+# React + Flask Development Boilerplate
 
 ## Overview
 Extremely lightweight development environment for a web application
