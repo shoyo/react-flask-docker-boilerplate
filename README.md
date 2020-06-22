@@ -72,10 +72,6 @@ in a separate terminal window or press __control + C__.
 * Add boilerplate for running tests locally and through continuous integration.
 * Add boilerplate for configuring production-ready settings and deployment.
 
-## Contributing
-If you'd like to improve this boilerplate code to maybe save a little bit of time
-for fellow developers, feel free to make a pull request or submit an issue. I'll
-also gladly respond to any emails at __shoyoinokuchi@gmail.com__.
 
 ## License
 Feel free to use the code in this repository however you wish. Details are provided in
